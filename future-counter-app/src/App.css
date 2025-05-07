@@ -1,0 +1,183 @@
+.App {
+  text-align: center;
+}
+
+.react-logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.react-logo {
+  width: 96px;
+  height: 96px;
+  animation: App-logo-spin infinite 20s linear;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+:root {
+  /* COLORS */
+  --body-background-color: #0D1117;
+  --counter-background-color: #161B22;
+  --font-color: #ffffff;
+  --increment-btn-color: #00FFAE;
+  --decrement-btn-color: #FF3864;
+  --reset-btn-color: #00CFFF;
+
+  /* FONT */
+  --title-font: 'Orbitron';
+  --count-value-font: 'Rajdhani';
+  --btn-font: 'ShareTechMono';
+}
+
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('./fonts/Orbitron-Bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('./fonts/Rajdhani-SemiBold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'ShareTechMono';
+  src: url('./fonts/ShareTechMono-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  color: var(--font-color);
+  line-height: 1.6;
+}
+
+/* GENERALLY */
+body {
+  background-color: var(--body-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+}
+
+
+.js-logo-container {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.js-logo-container__img {
+  width: 64px;
+  height: auto;
+}
+
+
+h1 {
+  font-size:2em;
+  font-family: var(--title-font);
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+
+.counter-container {
+  background-color: var(--counter-background-color);
+  border-radius: 12px;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.30);
+  padding: 16px;
+}
+
+
+.counter-container__display {
+  display: flex;
+  justify-content: center;
+}
+
+#counter-value {
+  font-family: var(--count-value-font);
+  font-size: 96px;
+}
+
+
+.counter-container__controls {
+  display: flex;
+  gap: 24px;
+}
+
+.counter-container__buttons {
+  width: 128px;
+  height: 48px;
+  border-radius: 6px;
+  border: none;
+  font-family: var(--btn-font);
+  cursor: pointer;
+  transition: filter 0.1s linear;
+  transition: transform 0.3s ease-in-out;
+}
+
+.increment-button {
+  background-color: var(--increment-btn-color);
+}
+
+.decrement-button {
+  background-color: var(--decrement-btn-color);
+}
+
+.reset-button {
+  background-color: var(--reset-btn-color);
+}
+
+.counter-container__buttons:hover {
+  filter: brightness(120%);
+  transform: scale(1.1);
+}
+
+.counter-container__buttons:active {
+  filter: brightness(90%);
+}
